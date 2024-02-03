@@ -1,0 +1,6 @@
+package com.brilliant.flix_id
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}

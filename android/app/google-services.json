@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1022725121953",
+    "project_id": "flix-id-course-eb270",
+    "storage_bucket": "flix-id-course-eb270.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022725121953:android:e7a38ed0035c2cb31fcde0",
+        "android_client_info": {
+          "package_name": "com.brilliant.flix_id"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnB-ejlgIpSLOscZ1FknfvBZxSr3F2BoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
