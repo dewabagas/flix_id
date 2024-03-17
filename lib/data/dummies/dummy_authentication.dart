@@ -9,7 +9,8 @@ class DummyAuthentication implements Authentication {
   }
 
   @override
-  Future<Result<String>> login({required String email, required String password}) async {
+  Future<Result<String>> login(
+      {required String email, required String password}) async {
     await Future.delayed(const Duration(seconds: 1));
     return const Result.success('ID-12345');
   }
@@ -21,9 +22,9 @@ class DummyAuthentication implements Authentication {
   }
 
   @override
-  Future<Result<String>> register({required String email, required String password}) {
+  Future<Result<String>> register(
+      {required String email, required String password}) {
     // TODO: implement register
     throw UnimplementedError();
   }
-  
 }

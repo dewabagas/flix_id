@@ -22,7 +22,8 @@ class LoginPage extends ConsumerWidget {
               onPressed: () {
                 Login login = ref.watch(loginProvider);
 
-                login(LoginParams(email: 'bagas.dewa@upi.edu', password: 'bagas1'))
+                login(LoginParams(
+                        email: 'bagas.dewa@upi.edu', password: 'bagas1'))
                     .then((result) {
                   if (result.isSuccess) {
                     Navigator.of(context).push(MaterialPageRoute(
