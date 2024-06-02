@@ -1,9 +1,10 @@
-import 'package:flix_id/domain/entities/movie.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/usecases/get_movie_list/get_movie_list.dart';
-import 'package:flix_id/domain/usecases/get_movie_list/get_movie_list_param.dart';
-import 'package:flix_id/presentation/providers/usecases/get_movie_list_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../domain/entities/movie.dart';
+import '../../../domain/entities/result.dart';
+import '../../../domain/usecases/get_movie_list/get_movie_list.dart';
+import '../../../domain/usecases/get_movie_list/get_movie_list_param.dart';
+import '../usecases/get_movie_list_provider.dart';
 
 part 'upcoming_provider.g.dart';
 
@@ -17,8 +18,8 @@ class Upcoming extends _$Upcoming {
 
     GetMovieList getMovieList = ref.read(getMovieListProvider);
 
-    var result = await getMovieList(GetMovieListParam(
-        category: MovieListCategories.upcoming, page: page));
+    var result = await getMovieList(
+        GetMovieListParam(category: MovieListCategories.upcoming, page: page));
 
     switch (result) {
       case Success(value: final movies):

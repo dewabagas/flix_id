@@ -4,7 +4,7 @@ part 'movie_detail.freezed.dart';
 
 @freezed
 class MovieDetail with _$MovieDetail {
-  factory MovieDetail({
+  const factory MovieDetail({
     required int id,
     required String title,
     String? posterPath,
@@ -20,8 +20,8 @@ class MovieDetail with _$MovieDetail {
       title: json['title'],
       overview: json['overview'],
       runtime: json['runtime'],
-      voteAverage: json['voteAverage'].toDouble(),
+      voteAverage: (json['vote_average'] ?? 0).toDouble(),
       genres: List<String>.from(json['genres'].map((e) => e['name'])),
-      backdropPath: json['backdrop_path'],
-      posterPath: json['poster_path']);
+      posterPath: json['poster_path'],
+      backdropPath: json['backdrop_path']);
 }
